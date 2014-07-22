@@ -16,3 +16,19 @@ section[role="region"] {
   margin-bottom: 1.5rem;
   position: relative;
 }*/
+
+/* Style #my-button blue with white text and darker blue ink. */
+paper-button[raisedButton].colored {
+  background: #4285f4;
+  color: #fff;
+}
+
+paper-button[raisedButton].colored #ripple,
+paper-button[raisedButton].colored::shadow #ripple {
+  color: #2a56c6;
+}
+
+paper-button[raisedButton].colored #focusBg,
+paper-button[raisedButton].colored::shadow #focusBg {
+  background: #3367d6;
+}
