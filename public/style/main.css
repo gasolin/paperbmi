@@ -18,6 +18,11 @@ section[role="region"] {
 }*/
 
 /* Style #my-button blue with white text and darker blue ink. */
+paper-button {
+  margin: 1em;
+  width: 10em;
+}
+
 paper-button[raisedButton].colored {
   background: #4285f4;
   color: #fff;

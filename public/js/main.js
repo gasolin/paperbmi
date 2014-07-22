@@ -13,7 +13,7 @@ var BMICalc = {
     this.getAllElements();
 
     this.calc_bmi.addEventListener('click', this.calculateBmi.bind(this));
-    this.about.addEventListener('click', this.aboutPage);
+    //this.about.addEventListener('click', this.aboutPage);
 
   },
 
@@ -26,8 +26,8 @@ var BMICalc = {
   getAllElements: function browser_getAllElements() {
 
     var elementIDs = [
-      'calc_bmi', 'bmi_form', 'bmi_result', 'bmi_suggest',
-      'about'];
+      'calc_bmi', 'bmi_form', 'bmi_result', 'bmi_suggest'
+    ];
 
     // Loop and add element with camel style name to Modal Dialog attribute.
     elementIDs.forEach(function createElementRef(name) {
