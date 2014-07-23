@@ -13,24 +13,23 @@ var BMICalc = {
     this.getAllElements();
 
     this.calc_bmi.addEventListener('click', this.calculateBmi.bind(this));
-    //this.about.addEventListener('click', this.aboutPage);
+    this.about.addEventListener('click', this.aboutPage);
 
   },
 
   toCamelCase: function toCamelCase(str) {
-    return str.replace(/\-(.)/g, function replacer(str, p1) {
+    return str.replace(/\-(.)/g, function(str, p1) {
       return p1.toUpperCase();
     });
   },
 
-  getAllElements: function browser_getAllElements() {
-
+  getAllElements: function bmi_getAllElements() {
     var elementIDs = [
-      'calc_bmi', 'bmi_form', 'bmi_result', 'bmi_suggest'
+      'calc_bmi', 'height', 'weight', 'bmi_result', 'bmi_suggest', 'about'
     ];
 
     // Loop and add element with camel style name to Modal Dialog attribute.
-    elementIDs.forEach(function createElementRef(name) {
+    elementIDs.forEach(function loopElement(name) {
       this[this.toCamelCase(name)] = document.getElementById(name);
     }, this);
   },
@@ -43,8 +42,8 @@ var BMICalc = {
 
   calculateBmi: function calculateBmi(e) {
     e.preventDefault();
-    var height = parseFloat(bmi_form.height.value);
-    var weight = parseFloat(bmi_form.weight.value);
+    var height = parseFloat(this.height.value);
+    var weight = parseFloat(this.weight.value);
     if (weight > 0 && height > 0) {
       var BMI = this.get_bmi_value(height, weight);
       bmi_result.innerHTML = 'Your BMI is ' + BMI;
