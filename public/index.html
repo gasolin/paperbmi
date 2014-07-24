@@ -61,13 +61,13 @@ Exchange the line above for this to enable offline support
 
       <div class="content">
         <h3>Enter Height and Weight, press 'Calc' for result</h3>
-         <paper-input id="height" label="Height (cm)" floatingLabel validate="^[0-9]*$" error="Type only numbers..."></paper-input>
+         <paper-input id="height" label="Height (cm)" floatingLabel validate="^\d+(\.\d+)?$" error="Type only numbers..."></paper-input>
          <br/>
-         <paper-input id="weight" label="Weight (kg)" floatingLabel validate="^[0-9]*$" error="Type only numbers..."></paper-input>
+         <paper-input id="weight" label="Weight (kg)" floatingLabel validate="^\d+(\.\d+)?$" error="Type only numbers..."></paper-input>
          <br/>
-         <paper-button id="calc_bmi" raisedButton label="Calc" class="colored"></paper-button>
-         <h4 id="bmi_result"></h4>
-         <h4 id="bmi_suggest"></h4>
+         <paper-button id="calc-bmi" raisedButton label="Calc" class="colored"></paper-button>
+         <h4 id="bmi-result"></h4>
+         <h4 id="bmi-suggest"></h4>
       </div>
     </core-scaffold>
 

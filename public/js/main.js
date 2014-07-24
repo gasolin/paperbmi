@@ -12,7 +12,7 @@ var BMICalc = {
   init: function calc_init() {
     this.getAllElements();
 
-    this.calc_bmi.addEventListener('click', this.calculateBmi.bind(this));
+    this.calcBmi.addEventListener('click', this.calculateBmi.bind(this));
     this.about.addEventListener('click', this.aboutPage);
 
   },
@@ -25,7 +25,7 @@ var BMICalc = {
 
   getAllElements: function bmi_getAllElements() {
     var elementIDs = [
-      'calc_bmi', 'height', 'weight', 'bmi_result', 'bmi_suggest', 'about'
+      'calc-bmi', 'height', 'weight', 'bmi-result', 'bmi-suggest', 'about'
     ];
 
     // Loop and add element with camel style name to Modal Dialog attribute.
@@ -46,18 +46,18 @@ var BMICalc = {
     var weight = parseFloat(this.weight.value);
     if (weight > 0 && height > 0) {
       var BMI = this.get_bmi_value(height, weight);
-      bmi_result.innerHTML = '你的 BMI 值是 ' + BMI;
+      this.bmiResult.innerHTML = '你的 BMI 值是 ' + BMI;
       // Give health advice
       if (BMI > 25) {
-        bmi_suggest.innerHTML = '你該節食了';
+        this.bmiSuggest.innerHTML = '你該節食了';
       } else if (BMI < 20) {
-        bmi_suggest.innerHTML = '你該多吃點';
+        this.bmiSuggest.innerHTML = '你該多吃點';
       } else {
-        bmi_suggest.innerHTML = '體型很棒喔';
+        this.bmiSuggest.innerHTML = '體型很棒喔';
       }
     } else {
-      bmi_result.innerHTML = '';
-      bmi_suggest.innerHTML = '請輸入身高體重';
+      this.bmiResult.innerHTML = '';
+      this.bmiSuggest.innerHTML = '請輸入身高體重';
     }
   },
 
