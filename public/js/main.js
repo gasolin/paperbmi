@@ -46,7 +46,7 @@ var BMICalc = {
     var weight = parseFloat(this.weight.value);
     if (weight > 0 && height > 0) {
       var BMI = this.get_bmi_value(height, weight);
-      bmi_result.innerHTML = 'Your BMI is ' + BMI;
+      bmi_result.innerHTML = '你的 BMI 值是 ' + BMI;
       // Give health advice
       if (BMI > 25) {
         bmi_suggest.innerHTML = '你該節食了';
