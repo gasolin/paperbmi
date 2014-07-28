@@ -325,6 +325,12 @@ module.exports = function(grunt) {
           ]
         }
       }
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
   });
 
@@ -339,11 +345,11 @@ module.exports = function(grunt) {
     'welcome', 'clean:dist', 'mocha_phantomjs', 'manifest',
     /*copy public folder*/
     'copy:staticWeb',
-    /*parse css/js for minify*/
+    /*parse css/js for minify
     'dom_munger:readcss', 'dom_munger:readjs',
     'dom_munger:cleancss', 'dom_munger:cleanjs',
     'cssmin:main', 'uglify:main',
-    'dom_munger:updatecss', 'dom_munger:updatejs',
+    'dom_munger:updatecss', 'dom_munger:updatejs',*/
     /*append minified css/js*/
     'clean:test'
   ]);
