@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# Time: Mon Jul 28 2014 14:18:20 GMT+0000 (UTC)
+
+CACHE:
+fallback.html
+index.html
+js/app_installer.js
+js/background.js
+js/fallback.js
+js/main.js
+style/main.css
+style/icons/favicon.ico
+style/icons/apple-touch-icon-precomposed.png
+style/icons/icon128.png
+
+NETWORK:
+*
+
+FALLBACK:
+/ fallback.html
+
+SETTINGS:
+prefer-online
